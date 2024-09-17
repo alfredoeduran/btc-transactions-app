@@ -8,7 +8,7 @@ const path = require('path');
 const router = express.Router();
 
 // API key de BlockCypher
-const apiKey = '27fb69dc99214881a3539d569e46ed35';
+const apiKey = process.env.BLOCKCYPHER_API_KEY;  
 
 router.post('/generate', async (req, res) => {
     const { walletAddress } = req.body;
